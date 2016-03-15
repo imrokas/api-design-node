@@ -7,6 +7,15 @@ var jsonData = {count: 12, message: 'hey'};
 var PORT = 3000;
 var app = express();
 
+// reading the file async then sending data
+// var fs = require('fs');
+// app.get('/', function(req, res) {
+//   fs.readFile('index.html', 'utf8', function(err, data) {
+//     res.setHeader('Content-type', 'text/html');
+//     res.send(data);
+//   });
+// });
+
 app.get('/', function(req, res) {
   res.sendFile(__dirname + '/index.html', function(err, data) {
     if(err)
